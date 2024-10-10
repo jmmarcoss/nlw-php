@@ -1,5 +1,4 @@
 @props(['project'])
-
 <x-ui.card class="col-span-2 ">
     <div class="flex items-start justify-between pb-4">
         <div class="flex flex-col gap-[16px]">
@@ -14,12 +13,11 @@
             </div>
         </div>
         <div>
-            <button class="bg-[#5354FD] text-white font-bold tracking-wide uppercase px-8 py-3 rounded-[4px]
-                    hover:bg-[#1f20a6] transition duration-300 ease-in-out"
-                    @click="$refs.modal.showModal(); showModal= true"
-            >
-                Enviar uma proposta
-            </button>
+
+
+            <livewire:proposals.create :$project />
+
+
             <div class="flex items-center justify-between mt-4 text-[14px]">
                 <div class="text-[#8C8C9A]  leading-6">Encerra em:</div>
                 <div class="font-bold flex items-center space-x-1">
